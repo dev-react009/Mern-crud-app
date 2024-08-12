@@ -37,7 +37,6 @@ App.put("/UpdateUsr/:id", async (req, res) => {
 
 App.delete("/deleteUsr/:id", async (req, res) => {
     const id = req.params.id;
-    console.log(id)
     const data = await UsrModel.findByIdAndDelete({ "_id": id });
     res.json(data);
 }); 
